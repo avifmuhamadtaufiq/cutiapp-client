@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { UsersDashboardContext } from 'pages/user-dashboard'
-import { makeStyles, Grid, Card, CardContent, Typography, Button, CardActions } from '@material-ui/core'
+import { makeStyles, Grid, Card, CardContent, Typography, Button, CardActions, CardMedia } from '@material-ui/core'
 import cookie from 'js-cookie'
 import FileSaver from 'file-saver'
 import moment from 'moment'
@@ -8,6 +8,9 @@ import moment from 'moment'
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(4)
+  },
+  media: {
+    height: 300
   }
 }))
 
@@ -112,18 +115,18 @@ const CreateSurat: React.FC = () => {
           xs={12}
         >
           <Card>
+            <CardMedia
+              className={classes.media}
+              image="/kk.png"
+              title="Surat Keterangan Kuliah"
+            />
             <CardContent>
-              <Typography variant="h5" component="h2">
+              <Typography variant="h4" component="h2">
                 Surat Keterangan Kuliah
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button onClick={handleCreateKK} size="small">Buat Surat</Button>
+              <Button onClick={handleCreateKK} variant="contained" color="primary">Buat Surat</Button>
             </CardActions>
           </Card>
         </Grid>
@@ -135,18 +138,18 @@ const CreateSurat: React.FC = () => {
           xs={12}
         >
           <Card>
+            <CardMedia
+              className={classes.media}
+              image="/ck.png"
+              title="Surat Keterangan Kuliah"
+            />
             <CardContent>
-              <Typography variant="h5" component="h2">
-                Surat Keterangan Kuliah
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
+              <Typography variant="h4" component="h2">
+                Surat Keterangan Cuti Kuliah
               </Typography>
             </CardContent>
             <CardActions>
-              <Button onClick={handleCreateCK}size="small">Buat Surat</Button>
+              <Button onClick={handleCreateCK} variant="contained" color="primary">Buat Surat</Button>
             </CardActions>
           </Card>
         </Grid>

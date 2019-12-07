@@ -226,8 +226,8 @@ const SettingView: React.FC = () => {
               <Divider />
               <CardActions>
                 <Button
+                  variant="contained"
                   color="primary"
-                  variant="outlined"
                   type="submit"
                 >
                   Update
