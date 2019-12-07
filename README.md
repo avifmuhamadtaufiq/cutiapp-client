@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Example app with Jest tests inside a NextJS TypeScript app
 
 ## How to use
