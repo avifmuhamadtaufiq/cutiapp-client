@@ -83,7 +83,7 @@ const Agenda: React.SFC<AgendaProps> = props => {
   const onSubmit = async (data) => {
     const token = cookie.get('token')
     try {
-      const url = 'http://localhost:8000/api/agenda-csv'
+      const url = 'https://rocky-mountain-69858.herokuapp.com//api/agenda-csv'
       const dataToSend = data['bulan'] === '' ? {'tahun': data['tahun']} : data
       const response = await fetch(
         url,

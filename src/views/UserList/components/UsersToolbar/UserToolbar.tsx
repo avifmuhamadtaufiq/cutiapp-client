@@ -83,7 +83,7 @@ const UsersToolbar: React.SFC<UsersToolbarProps> = props => {
   const onSubmit = async (data) => {
       const token = cookie.get('token')
       try {
-        const url = 'http://localhost:8000/api/users-csv'
+        const url = 'https://rocky-mountain-69858.herokuapp.com//api/users-csv'
         const response = await fetch(
           url,
           {

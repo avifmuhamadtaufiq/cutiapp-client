@@ -22,7 +22,7 @@ const CreateSurat: React.FC = () => {
   const handleCreateKK = async () => {
     const token = cookie.get('token')
     try {
-      const url = 'http://localhost:8000/api/create-kk'
+      const url = 'https://rocky-mountain-69858.herokuapp.com//api/create-kk'
       const response = await fetch(
         url,
         {
@@ -63,7 +63,7 @@ const CreateSurat: React.FC = () => {
   const handleCreateCK = async () => {
     const token = cookie.get('token')
     try {
-      const url = 'http://localhost:8000/api/create-ck'
+      const url = 'https://rocky-mountain-69858.herokuapp.com//api/create-ck'
       const response = await fetch(
         url,
         {

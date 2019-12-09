@@ -109,7 +109,7 @@ AgendaPage.getInitialProps = async ctx => {
     return redirectOnError(ctx)
   }
 
-  const apiUrl = `http://localhost:8000/api/auth/user`
+  const apiUrl = `https://rocky-mountain-69858.herokuapp.com//api/auth/user`
 
   try {
     const response = await fetch(apiUrl, {
