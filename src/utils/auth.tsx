@@ -29,7 +29,7 @@ export const auth = ctx => {
 }
 
 export const logout = async () => {
-  const url = 'https://rocky-mountain-69858.herokuapp.com//api/auth/logout'
+  const url = 'https://rocky-mountain-69858.herokuapp.com/api/auth/logout'
   const token = cookie.get('token')
 
   try {

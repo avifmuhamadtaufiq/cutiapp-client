@@ -26,7 +26,7 @@ const AddUser: NextPage<{ token: string, data: any }> = (props) => {
       ...snackControl, disabled: true
     })
     try {
-      const url = 'https://rocky-mountain-69858.herokuapp.com//api/users/'
+      const url = 'https://rocky-mountain-69858.herokuapp.com/api/users/'
       const response = await fetch(
         url,
         {
@@ -100,7 +100,7 @@ AddUser.getInitialProps = async ctx => {
     return redirectOnError(ctx)
   }
 
-  const apiUrl = `https://rocky-mountain-69858.herokuapp.com//api/auth/user`
+  const apiUrl = `https://rocky-mountain-69858.herokuapp.com/api/auth/user`
 
   try {
     const response = await fetch(apiUrl, {

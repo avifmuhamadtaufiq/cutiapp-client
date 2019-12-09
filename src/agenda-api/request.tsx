@@ -9,8 +9,8 @@ export interface AgendaPageProps {
 }
 
 export const loadAgendas = async ({ token, page, noSurat }: AgendaPageProps) => {
-  const apiUrl = `https://rocky-mountain-69858.herokuapp.com//api/agenda/?page=${page}`
-  const apiNoSurat = `https://rocky-mountain-69858.herokuapp.com//api/agenda/${noSurat}`
+  const apiUrl = `https://rocky-mountain-69858.herokuapp.com/api/agenda/?page=${page}`
+  const apiNoSurat = `https://rocky-mountain-69858.herokuapp.com/api/agenda/${noSurat}`
 
   const url = noSurat !== '' ? apiNoSurat : apiUrl
   const response = await fetch(url, {
@@ -29,7 +29,7 @@ export const Agandas: React.FC<AgendaPageProps> = ({ token, page, children }) =>
 }
 
 // export const FUsers = ([page, token], _props, { signal }) =>
-//   fetch(`https://rocky-mountain-69858.herokuapp.com//api/users/?page=${page}`, {
+//   fetch(`https://rocky-mountain-69858.herokuapp.com/api/users/?page=${page}`, {
 //     method: "GET",
 //     headers: {
 //       Authorization: 'token ' + token

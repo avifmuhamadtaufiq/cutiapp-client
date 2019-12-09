@@ -22,7 +22,7 @@ const SettingView: React.FC = () => {
   const handleSubmitFunc = handleSubmit(async data => {
       const token = cookie.get('token')
       try {
-        const url = `https://rocky-mountain-69858.herokuapp.com//api/update-password`
+        const url = `https://rocky-mountain-69858.herokuapp.com/api/update-password`
         const response = await fetch(
           url,
           {

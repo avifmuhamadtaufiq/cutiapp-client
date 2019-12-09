@@ -102,7 +102,7 @@ const AgendaTable: React.SFC<AgendaTableProps> = props => {
   const handleDelete = async (reload: any) => {
 
     if (gstate.selectedAgendas.length === 1) {
-      const url = `https://rocky-mountain-69858.herokuapp.com//api/agenda/${gstate.selectedAgendas[0]}`
+      const url = `https://rocky-mountain-69858.herokuapp.com/api/agenda/${gstate.selectedAgendas[0]}`
       const token = cookie.get('token')
       try {
         const response = await fetch(url, {
@@ -140,7 +140,7 @@ const AgendaTable: React.SFC<AgendaTableProps> = props => {
     }
 
     if (gstate.selectedAgendas.length > 1) {
-      const url = 'https://rocky-mountain-69858.herokuapp.com//api/bulk-delete-agenda'
+      const url = 'https://rocky-mountain-69858.herokuapp.com/api/bulk-delete-agenda'
       const token = cookie.get('token')
       try {
         const response = await fetch(url, {

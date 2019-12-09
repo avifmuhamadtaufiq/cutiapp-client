@@ -89,7 +89,7 @@ const UserTable: React.SFC<UserTableProps> = props => {
   const handleDelete = async (reload: any) => {
 
     if (gstate.selectedUsers.length === 1) {
-      const url = `https://rocky-mountain-69858.herokuapp.com//api/users/${gstate.selectedUsers[0]}`
+      const url = `https://rocky-mountain-69858.herokuapp.com/api/users/${gstate.selectedUsers[0]}`
       const token = cookie.get('token')
       try {
         const response = await fetch(url, {
@@ -126,7 +126,7 @@ const UserTable: React.SFC<UserTableProps> = props => {
     }
 
     if (gstate.selectedUsers.length > 1) {
-      const url = 'https://rocky-mountain-69858.herokuapp.com//api/bulk-delete-user'
+      const url = 'https://rocky-mountain-69858.herokuapp.com/api/bulk-delete-user'
       const token = cookie.get('token')
       try {
         const response = await fetch(url, {
