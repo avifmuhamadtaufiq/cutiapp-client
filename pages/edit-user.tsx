@@ -113,7 +113,13 @@ EditUser.getInitialProps = async ctx => {
 
     if (response.ok) {
       const data = await response.json()
-      return { token: token, users: data.results[0], nim: nim }
+
+      if (!data.is_staff) {
+        return redirectOnError(ctx)
+      } else {
+        return { token: token, users: data.results[0], nim: nim }
+      }
+      
     } else {
       return redirectOnError(ctx)
     }

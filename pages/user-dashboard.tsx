@@ -99,7 +99,13 @@ UserDashboard.getInitialProps = async ctx => {
 
     if (response.ok) {
       const data = await response.json()
-      return { data: data, token: token }
+
+      if (data.is_staff) {
+        return redirectOnError(ctx)
+      } else {
+        return { data: data, token: token }
+      }
+
     } else {
       return redirectOnError(ctx)
     }
