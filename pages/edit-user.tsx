@@ -102,9 +102,11 @@ EditUser.getInitialProps = async ctx => {
   }
 
   const apiUrl = `https://rocky-mountain-69858.herokuapp.com/api/users/${nim}`
+  const ceckUser = `https://rocky-mountain-69858.herokuapp.com/api/auth/user`
+
 
   try {
-    const response = await fetch(apiUrl, {
+    const response = await fetch(ceckUser, {
       credentials: 'include',
       headers: {
         Authorization: 'token ' + token
@@ -117,9 +119,25 @@ EditUser.getInitialProps = async ctx => {
       if (!data.is_staff) {
         return redirectOnError(ctx)
       } else {
-        return { token: token, users: data.results[0], nim: nim }
+        return redirectOnError(ctx)
       }
-      
+    }
+
+  } catch (error) {
+    return redirectOnError(ctx)
+  }
+
+  try {
+    const response = await fetch(apiUrl, {
+      credentials: 'include',
+      headers: {
+        Authorization: 'token ' + token
+      }
+    })
+
+    if (response.ok) {
+      const data = await response.json()
+        return { token: token, users: data.results[0], nim: nim }
     } else {
       return redirectOnError(ctx)
     }
