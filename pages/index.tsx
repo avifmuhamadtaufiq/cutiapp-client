@@ -23,7 +23,7 @@ function SiginPage () {
   }
 
   const onSubmit = async (data: { username: string, password: string}) => {
-    const url = 'https://rocky-mountain-69858.herokuapp.com/api/auth/login'
+    const url = 'http://localhost:8000/api/auth/login'
 
     try {
       const response = await fetch(url, {

@@ -32,7 +32,7 @@ const EditUser = ({token, users, nim }) => {
       ...snackControl, disabled: true
     })
     try {
-      const url = `https://rocky-mountain-69858.herokuapp.com/api/users/${nim}`
+      const url = `http://localhost:8000/api/users/${nim}`
       const response = await fetch(
         url,
         {
@@ -101,7 +101,7 @@ EditUser.getInitialProps = async ctx => {
     return redirectOnError(ctx)
   }
 
-  const apiUrl = `https://rocky-mountain-69858.herokuapp.com/api/users/${nim}`
+  const apiUrl = `http://localhost:8000/api/users/${nim}`
 
   try {
     const response = await fetch(apiUrl, {

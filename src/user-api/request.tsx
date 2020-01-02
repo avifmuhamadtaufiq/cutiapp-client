@@ -17,8 +17,8 @@ export interface UsersFetchProps {
 }
 
 export const loadUsers = async ({ token, page, nim }: UsersFetchProps) => {
-  const apiUrl = `https://rocky-mountain-69858.herokuapp.com/api/users/?page=${page}`
-  const apiNim = `https://rocky-mountain-69858.herokuapp.com/api/users/${nim}`
+  const apiUrl = `http://localhost:8000/api/users/?page=${page}`
+  const apiNim = `http://localhost:8000/api/users/${nim}`
 
   const url = nim === '' ? apiUrl : apiNim
   const response = await fetch(url, {
@@ -37,7 +37,7 @@ export const Users: React.FC<UsersFetchProps> = ({ token, page, children }) => {
 }
 
 // export const FUsers = ([page, token], _props, { signal }) =>
-//   fetch(`https://rocky-mountain-69858.herokuapp.com/api/users/?page=${page}`, {
+//   fetch(`http://localhost:8000/api/users/?page=${page}`, {
 //     method: "GET",
 //     headers: {
 //       Authorization: 'token ' + token
